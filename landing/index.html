@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth; scroll-padding-top: 80px;">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing</title>
+        <link rel="stylesheet" href="./assets/css/output.css">
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <nav id="navbar" class="flex items-center justify-between fixed z-50 top-0 w-full px-6 md:px-16 lg:px-24 xl:px-32 py-4 backdrop-blur">
+            <a href="#">
+                <img id="logo" src="./assets/imgs/logo-dark.svg" alt="Logo" class="h-9 md:h-9.5 w-auto shrink-0">
+            </a>
+
+            <div class="hidden items-center md:gap-8 lg:gap-12 md:flex lg:pl-20">
+                <a class="nav-link" href="#" class="hover:text-slate-600 dark:hover:text-slate-300">Home</a>
+                <a class="nav-link" href="#features" class="hover:text-slate-600 dark:hover:text-slate-300">Features</a>
+                <a class="nav-link" href="#testimonials" class="hover:text-slate-600 dark:hover:text-slate-300">Testimonials</a>
+                <a class="nav-link" href="#pricing" class="hover:text-slate-600 dark:hover:text-slate-300">Pricing</a>
+                <a class="nav-link" href="#faqs" class="hover:text-slate-600 dark:hover:text-slate-300">FAQ's</a>
+            </div>
+
+            <div id="mobileMenu" class="fixed inset-0 flex flex-col items-center justify-center gap-6 text-lg font-medium bg-white/60 dark:bg-black/40 backdrop-blur-md md:hidden transition duration-300 -translate-x-full">
+                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#features">Features</a>
+                <a class="nav-link" href="#testimonials">Testimonials</a>
+                <a class="nav-link" href="#pricing">Pricing</a>
+                <a class="nav-link" href="#faqs">FAQ's</a>
+                <button class="sfx-btn">Sign in</button>
+                <button id="closeMenu" class="aspect-square size-10 p-1 items-center justify-center bg-purple-600 hover:bg-purple-700 transition text-white rounded-md flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="flex items-center gap-4 md:gap-6">
+                <button id="themeToggle" class="flex items-center justify-center size-9 p-2 rounded-full bg-slate-950/5 hover:bg-slate-950/10 dark:bg-white/10 dark:hover:bg-white/20 transition-colors duration-200 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                    </svg>
+                </button>
+
+                <button class="sfx-btn hidden md:block hover:bg-slate-100 dark:hover:bg-purple-950 transition px-4 py-2 border border-purple-600 rounded-md">Sign in</button>
+                <button class="sfx-btn hidden md:block px-4 py-2 bg-purple-600 hover:bg-purple-700 transition text-white rounded-md">Get started</button>
+                <button id="openMenu" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu">
+                        <path d="M4 12h16" />
+                        <path d="M4 18h16" />
+                        <path d="M4 6h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="flex flex-col items-center justify-center text-center px-4">
+            <div class="flex flex-wrap items-center justify-center gap-3 p-1.5 pr-4 mt-46 rounded-full border border-slate-300 dark:border-slate-600 bg-white/70 dark:bg-slate-600/20">
+                <div class="flex items-center -space-x-3">
+                    <img class="size-7 rounded-full" height="50" width="50" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=50" alt="userImage1" />
+                    <img class="size-7 rounded-full" height="50" width="50" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=50" alt="userImage2" />
+                </div>
+                <p class="text-xs">Join community of 1m+ founders </p>
+            </div>
+            <h1 class="hero-title mt-2 text-5xl/15 md:text-[64px]/19 font-semibold max-w-4xl"></h1>
+            <p class="text-base dark:text-slate-300 max-w-lg mt-2">
+                Our latest thoughts, trends, and tools, written to help you learn, build, and grow faster.
+            </p>
+            <div class="flex items-center gap-4 mt-8">
+                <button class="sfx-btn bg-purple-600 hover:bg-purple-700 transition text-white rounded-md px-6 h-11">Get started</button>
+                <button class="sfx-btn border border-purple-900 transition text-slate-600 dark:text-white rounded-md px-6 h-11">Watch demo</button>
+            </div>
+            <h3 class="text-base text-center text-slate-400 mt-28 pb-14 font-medium">Trusting by leading brands, including —</h3>
+            <div class="overflow-hidden w-full relative max-w-5xl mx-auto select-none">
+                <div class="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent dark:from-gray-950"></div>
+                <div class="marquee-inner will-change-transform max-w-5xl mx-auto">
+                    <div id="logo-track" class="flex">
+                        <img class="mx-11" src="./assets/imgs/companies-logo/company-logo-1.svg" alt="Company 1" width="100" height="100" draggable="false" style="filter: grayscale(100%)" />
+                        <img class="mx-11" src="./assets/imgs/companies-logo/company-logo-2.svg" alt="Company 2" width="100" height="100" draggable="false" style="filter: grayscale(100%)" />
+                        <img class="mx-11" src="./assets/imgs/companies-logo/company-logo-3.svg" alt="Company 3" width="100" height="100" draggable="false" style="filter: grayscale(100%)" />
+                        <img class="mx-11" src="./assets/imgs/companies-logo/company-logo-4.svg" alt="Company 4" width="100" height="100" draggable="false" style="filter: grayscale(100%)" />
+                        <img class="mx-11" src="./assets/imgs/companies-logo/company-logo-5.svg" alt="Company 5" width="100" height="100" draggable="false" style="filter: grayscale(100%)" />
+                        <img class="mx-11" src="./assets/imgs/companies-logo/company-logo-1.svg" alt="Company 1" width="100" height="100" draggable="false" style="filter: grayscale(100%)" />
+                        <img class="mx-11" src="./assets/imgs/companies-logo/company-logo-2.svg" alt="Company 2" width="100" height="100" draggable="false" style="filter: grayscale(100%)" />
+                        <img class="mx-11" src="./assets/imgs/companies-logo/company-logo-3.svg" alt="Company 3" width="100" height="100" draggable="false" style="filter: grayscale(100%)" />
+                        <img class="mx-11" src="./assets/imgs/companies-logo/company-logo-4.svg" alt="Company 4" width="100" height="100" draggable="false" style="filter: grayscale(100%)" />
+                        <img class="mx-11" src="./assets/imgs/companies-logo/company-logo-5.svg" alt="Company 5" width="100" height="100" draggable="false" style="filter: grayscale(100%)" />
+                    </div>
+                </div>
+                <div class="absolute right-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent dark:from-gray-950"></div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <section id="features">
+            <div class="text-center">
+                <p class="text-center font-medium text-indigo-600 dark:text-indigo-400 mt-28 px-10 py-2 rounded-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 w-max mx-auto">
+                    Features</p>
+                <h2 class="text-3xl font-semibold text-center mx-auto mt-4">Built for builders</h2>
+                <p class="mt-2 text-slate-500 dark:text-slate-300 max-w-xl mx-auto">
+                    Components, patterns and pages — everything you need to ship.
+                </p>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-6 md:gap-4 mt-10 px-6 md:px-16 lg:px-24 xl:px-32">
+                <div class="feature-card p-6 rounded-xl space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/20 max-w-80 md:max-w-66">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="text-purple-500 size-8 mt-4">
+                        <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+                    </svg>
+                    <h3 class="text-base font-medium">Lightning-fast setup</h3>
+                    <p class="text-slate-400 line-clamp-2">
+                        Launch production-ready pages in minutes with prebuilt components.
+                    </p>
+                </div>
+
+                <div class="feature-card p-6 rounded-xl space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/20 max-w-80 md:max-w-66">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="text-purple-500 size-8 mt-4">
+                        <path d="M7 10v12" />
+                        <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
+                    </svg>
+                    <h3 class="text-base font-medium">Pixel perfect</h3>
+                    <p class="text-slate-400 line-clamp-2">
+                        Modern Figma-driven UI that translates to exact code.
+                    </p>
+                </div>
+
+                <div class="feature-card p-6 rounded-xl space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/20 max-w-80 md:max-w-66">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="text-purple-500 size-8 mt-4">
+                        <path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z" />
+                        <rect x="3" y="14" width="7" height="7" rx="1" />
+                        <circle cx="17.5" cy="17.5" r="3.5" />
+                    </svg>
+                    <h3 class="text-base font-medium">Highly customizable</h3>
+                    <p class="text-slate-400 line-clamp-2">
+                        Tailwind utility-first classes make customization trivial.
+                    </p>
+                </div>
+
+                <div class="feature-card p-6 rounded-xl space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/20 max-w-80 md:max-w-66">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="text-purple-500 size-8 mt-4">
+                        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+                        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+                        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+                        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+                    </svg>
+                    <h3 class="text-base font-medium">Accessible & responsive</h3>
+                    <p class="text-slate-400 line-clamp-2">
+                        Built with accessibility and mobile-first design in mind.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <div class="text-center">
+                <p class="text-center font-medium text-indigo-600 dark:text-indigo-400 mt-28 px-10 py-2 rounded-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 w-max mx-auto">
+                    Testimonials</p>
+                <h2 class="text-3xl font-semibold text-center mx-auto mt-4">Our Social Proof</h2>
+                <p class="mt-2 text-slate-500 dark:text-slate-300 max-w-xl mx-auto">
+                    A visual collection of our most recent works - each piece crafted with intention, emotion and style.
+                </p>
+            </div>
+            <div class="marquee-row w-full mx-auto max-w-5xl overflow-hidden relative">
+                <div class="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent dark:from-gray-950"></div>
+                <div class="marquee-inner-testimonials flex transform-gpu min-w-[200%] pt-10 pb-5" id="row1">
+                    <div class="testimonial-card p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+                        <div class="flex gap-2">
+                            <img class="size-11 rounded-full" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&amp;w=200" alt="User Image">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-1">
+                                    <h3>Briar Martin</h3>
+                                    <svg class="mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-slate-500">@neilstellar</span>
+                            </div>
+                        </div>
+                        <p class="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+                    </div>
+
+                    <div class="testimonial-card p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+                        <div class="flex gap-2">
+                            <img class="size-11 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&amp;w=200" alt="User Image">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-1">
+                                    <h3>Avery Johnson</h3>
+                                    <svg class="mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-slate-500">@averywrites</span>
+                            </div>
+                        </div>
+                        <p class="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+                    </div>
+
+                    <div class="testimonial-card p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+                        <div class="flex gap-2">
+                            <img class="size-11 rounded-full" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&amp;auto=format&amp;fit=crop&amp;q=60" alt="User Image">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-1">
+                                    <h3>Jordan Lee</h3>
+                                    <svg class="mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-slate-500">@jordantalks</span>
+                            </div>
+                        </div>
+                        <p class="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+                    </div>
+
+                    <div class="testimonial-card p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+                        <div class="flex gap-2">
+                            <img class="size-11 rounded-full" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200&amp;auto=format&amp;fit=crop&amp;q=60" alt="User Image">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-1">
+                                    <h3>Avery Johnson</h3>
+                                    <svg class="mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-slate-500">@averywrites</span>
+                            </div>
+                        </div>
+                        <p class="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+                    </div>
+
+                    <div class="testimonial-card p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+                        <div class="flex gap-2">
+                            <img class="size-11 rounded-full" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&amp;w=200" alt="User Image">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-1">
+                                    <h3>Briar Martin</h3>
+                                    <svg class="mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-slate-500">@neilstellar</span>
+                            </div>
+                        </div>
+                        <p class="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+                    </div>
+
+                    <div class="testimonial-card p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+                        <div class="flex gap-2">
+                            <img class="size-11 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&amp;w=200" alt="User Image">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-1">
+                                    <h3>Avery Johnson</h3>
+                                    <svg class="mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-slate-500">@averywrites</span>
+                            </div>
+                        </div>
+                        <p class="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+                    </div>
+
+                    <div class="testimonial-card p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+                        <div class="flex gap-2">
+                            <img class="size-11 rounded-full" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&amp;auto=format&amp;fit=crop&amp;q=60" alt="User Image">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-1">
+                                    <h3>Jordan Lee</h3>
+                                    <svg class="mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-slate-500">@jordantalks</span>
+                            </div>
+                        </div>
+                        <p class="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+                    </div>
+
+                    <div class="testimonial-card p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+                        <div class="flex gap-2">
+                            <img class="size-11 rounded-full" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200&amp;auto=format&amp;fit=crop&amp;q=60" alt="User Image">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-1">
+                                    <h3>Avery Johnson</h3>
+                                    <svg class="mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-slate-500">@averywrites</span>
+                            </div>
+                        </div>
+                        <p class="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+                    </div>
+                </div>
+                <div class="absolute right-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent dark:from-gray-950"></div>
+            </div>
+            <div class="marquee-row w-full mx-auto max-w-5xl overflow-hidden relative">
+                <div class="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent dark:from-gray-950"></div>
+                <div class="marquee-inner-testimonials marquee-reverse flex transform-gpu min-w-[200%] pt-5 pb-1" id="row2">
+                    <div class="testimonial-card p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+                        <div class="flex gap-2">
+                            <img class="size-11 rounded-full" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&amp;w=200" alt="User Image">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-1">
+                                    <h3>Briar Martin</h3>
+                                    <svg class="mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-slate-500">@neilstellar</span>
+                            </div>
+                        </div>
+                        <p class="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+                    </div>
+
+                    <div class="testimonial-card p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+                        <div class="flex gap-2">
+                            <img class="size-11 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&amp;w=200" alt="User Image">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-1">
+                                    <h3>Avery Johnson</h3>
+                                    <svg class="mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-slate-500">@averywrites</span>
+                            </div>
+                        </div>
+                        <p class="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+                    </div>
+
+                    <div class="testimonial-card p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+                        <div class="flex gap-2">
+                            <img class="size-11 rounded-full" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&amp;auto=format&amp;fit=crop&amp;q=60" alt="User Image">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-1">
+                                    <h3>Jordan Lee</h3>
+                                    <svg class="mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-slate-500">@jordantalks</span>
+                            </div>
+                        </div>
+                        <p class="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+                    </div>
+
+                    <div class="testimonial-card p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+                        <div class="flex gap-2">
+                            <img class="size-11 rounded-full" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200&amp;auto=format&amp;fit=crop&amp;q=60" alt="User Image">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-1">
+                                    <h3>Avery Johnson</h3>
+                                    <svg class="mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-slate-500">@averywrites</span>
+                            </div>
+                        </div>
+                        <p class="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+                    </div>
+
+                    <div class="testimonial-card p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+                        <div class="flex gap-2">
+                            <img class="size-11 rounded-full" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&amp;w=200" alt="User Image">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-1">
+                                    <h3>Briar Martin</h3>
+                                    <svg class="mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-slate-500">@neilstellar</span>
+                            </div>
+                        </div>
+                        <p class="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+                    </div>
+
+                    <div class="testimonial-card p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+                        <div class="flex gap-2">
+                            <img class="size-11 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&amp;w=200" alt="User Image">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-1">
+                                    <h3>Avery Johnson</h3>
+                                    <svg class="mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-slate-500">@averywrites</span>
+                            </div>
+                        </div>
+                        <p class="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+                    </div>
+
+                    <div class="testimonial-card p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+                        <div class="flex gap-2">
+                            <img class="size-11 rounded-full" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&amp;auto=format&amp;fit=crop&amp;q=60" alt="User Image">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-1">
+                                    <h3>Jordan Lee</h3>
+                                    <svg class="mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-slate-500">@jordantalks</span>
+                            </div>
+                        </div>
+                        <p class="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+                    </div>
+
+                    <div class="testimonial-card p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+                        <div class="flex gap-2">
+                            <img class="size-11 rounded-full" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200&amp;auto=format&amp;fit=crop&amp;q=60" alt="User Image">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-1">
+                                    <h3>Avery Johnson</h3>
+                                    <svg class="mt-0.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" fill="#2196F3"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-slate-500">@averywrites</span>
+                            </div>
+                        </div>
+                        <p class="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+                    </div>
+                </div>
+                <div class="absolute right-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent dark:from-gray-950"></div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="relative" id="pricing">
+            <div class="text-center">
+                <p class="text-center font-medium text-indigo-600 dark:text-indigo-400 mt-28 px-10 py-2 rounded-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 w-max mx-auto">
+                PRICING</p>
+                <h2 class="text-3xl font-semibold text-center mx-auto mt-4">Our Pricing Plans</h2>
+                <p class="text-slate-600 dark:text-slate-300 text-center mt-2 max-w-lg mx-auto">Flexible pricing options designed to meet your needs — whether you're just getting started or scaling up.</p>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-6 mt-16">
+                <!-- Basic Plan -->
+                <div class="pricing-plan p-6 rounded-2xl max-w-75 w-full shadow-[0px_4px_26px] shadow-black/6 bg-white/50 dark:bg-gray-800/50 border border-slate-200 dark:border-slate-800">
+
+                    <p class="font-medium">Basic Plan</p>
+                    <h3 class="text-3xl font-semibold mt-1">$29<span class="font-normal text-sm text-slate-300">/mo</span></h3>
+
+                    <hr class="my-8 border-slate-300 dark:border-slate-700" />
+
+                    <div class="space-y-2 text-slate-600 dark:text-slate-300">
+
+                        <div class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" class="text-purple-600" viewBox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <span>5 Projects</span>
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" class="text-purple-600" viewBox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <span>10 GB Storage</span>
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" class="text-purple-600" viewBox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <span>Basic Support</span>
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" class="text-purple-600" viewBox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <span>Community Access</span>
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" class="text-purple-600" viewBox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <span>Basic Code Review</span>
+                        </div>
+
+                    </div>
+
+                    <button class="sfx-btn transition w-full py-3 rounded-lg font-medium mt-8 bg-purple-600 hover:bg-purple-700 text-white">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Pro Plan (Most Popular) -->
+                <div class="pricing-plan relative p-6 pt-12 rounded-2xl max-w-75 w-full shadow-[0px_4px_26px] shadow-black/6 bg-gradient-to-b from-indigo-600 to-violet-600 text-white">
+
+                    <div class="flex items-center text-xs gap-1 py-1.5 px-2 text-purple-600 absolute top-4 right-4 rounded bg-white font-medium">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24">
+                            <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+                            <path d="M20 2v4" />
+                            <path d="M22 4h-4" />
+                            <circle cx="4" cy="20" r="2" />
+                        </svg>
+                        <p>Most Popular</p>
+                    </div>
+
+                    <p class="font-medium text-white">Pro Plan</p>
+                    <h3 class="text-3xl font-semibold mt-1 text-white">$79<span class="font-normal text-sm text-white">/mo</span></h3>
+
+                    <hr class="my-8 border-gray-300" />
+
+                    <div class="space-y-2 text-white">
+
+                        <div class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" class="text-white" viewBox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <span>50 Projects</span>
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" class="text-white" viewBox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <span>100 GB Storage</span>
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" class="text-white" viewBox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <span>Priority Support</span>
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" class="text-white" viewBox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <span>Team Collaboration</span>
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" class="text-white" viewBox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <span>Advanced Analytics</span>
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" class="text-white" viewBox="0 0 24 24">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+                            <span>Premium Code Review</span>
+                        </div>
+
+                    </div>
+
+                    <button class="sfx-btn transition w-full py-3 rounded-lg font-medium mt-8 bg-white hover:bg-slate-100 text-slate-800">
+                        Upgrade Now
+                    </button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-plan p-6 rounded-2xl max-w-75 w-full shadow-[0px_4px_26px] shadow-black/6 bg-white/50 dark:bg-gray-800/50 border border-slate-200 dark:border-slate-800">
+
+                    <p class="font-medium">Enterprise Plan</p>
+                    <h3 class="text-3xl font-semibold mt-1">$149<span class="font-normal text-sm text-slate-300">/mo</span></h3>
+
+                    <hr class="my-8 border-slate-300 dark:border-slate-700" />
+
+                    <div class="space-y-2 text-slate-600 dark:text-slate-300">
+
+                        <div class="flex items-center gap-1.5">
+                            <span>Unlimited Projects</span>
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <span>1 TB Storage</span>
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <span>24/7 Dedicated Support</span>
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <span>Custom Integrations</span>
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <span>SLA Guarantee</span>
+                        </div>
+
+                    </div>
+
+                    <button class="sfx-btn transition w-full py-3 rounded-lg font-medium mt-8 bg-purple-600 hover:bg-purple-700 text-white">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Faq Section -->
+        <div class="relative max-w-xl mx-auto flex flex-col items-center justify-center mt-28 px-4 md:px-0" id="faqs">
+            <div class="text-center">
+                <p class="text-center font-medium text-indigo-600 dark:text-indigo-400 px-10 py-2 rounded-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 w-max mx-auto">
+                    FAQ's</p>
+                <h2 class="text-3xl font-semibold text-center mx-auto mt-4">Frequently asked questions</h2>
+                <p class="mt-2 text-slate-500 dark:text-slate-300 max-w-xl mx-auto">
+                    Ship Beautiful Frontends Without the Overhead — Customizable, Scalable, and Developer-Friendly UI
+                    Components.
+                </p>
+            </div>
+
+            <div id="faq-container" class="mt-8 w-full">
+                <div class="border-b border-slate-300 dark:border-purple-900 py-4 cursor-pointer w-full" data-index="0">
+                    <div class="faq-header flex items-center justify-between">
+                        <h3 class="text-base font-medium">What is this SaaS app used for?</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 transition-transform duration-500 ease-in-out" data-chevron>
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </div>
+                    <p class="faq-answer text-sm text-slate-600 dark:text-slate-300 transition-all duration-500 ease-in-out max-w-xl opacity-0 max-h-0 overflow-hidden -translate-y-2">
+                        This app helps businesses manage their workflows more efficiently by automating tasks, tracking
+                        performance, and integrating with third-party tools.
+                    </p>
+                </div>
+
+                <div class="border-b border-slate-300 dark:border-purple-900 py-4 cursor-pointer w-full" data-index="1">
+                    <div class="faq-header flex items-center justify-between">
+                        <h3 class="text-base font-medium">Is there a free trial available?</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 transition-transform duration-500 ease-in-out" data-chevron>
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </div>
+                    <p class="faq-answer text-sm text-slate-600 dark:text-slate-300 transition-all duration-500 ease-in-out max-w-xl opacity-0 max-h-0 overflow-hidden -translate-y-2">
+                        Yes, we offer a 14-day free trial with full access to all features. No credit card is required to
+                        start the trial.
+                    </p>
+                </div>
+
+                <div class="border-b border-slate-300 dark:border-purple-900 py-4 cursor-pointer w-full" data-index="2">
+                    <div class="faq-header flex items-center justify-between">
+                        <h3 class="text-base font-medium">Can I change my subscription plan later?</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 transition-transform duration-500 ease-in-out" data-chevron>
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </div>
+                    <p class="faq-answer text-sm text-slate-600 dark:text-slate-300 transition-all duration-500 ease-in-out max-w-xl opacity-0 max-h-0 overflow-hidden -translate-y-2">
+                        Absolutely! You can upgrade or downgrade your plan at any time from your account settings.
+                    </p>
+                </div>
+
+                <div class="border-b border-slate-300 dark:border-purple-900 py-4 cursor-pointer w-full" data-index="3">
+                    <div class="faq-header flex items-center justify-between">
+                        <h3 class="text-base font-medium">How is my data secured?</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 transition-transform duration-500 ease-in-out" data-chevron>
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </div>
+                    <p class="faq-answer text-sm text-slate-600 dark:text-slate-300 transition-all duration-500 ease-in-out max-w-xl opacity-0 max-h-0 overflow-hidden -translate-y-2">
+                        We use industry-standard encryption, regular security audits, and secure data centers to ensure your
+                        data is safe and protected.
+                    </p>
+                </div>
+
+                <div class="border-b border-slate-300 dark:border-purple-900 py-4 cursor-pointer w-full" data-index="4">
+                    <div class="faq-header flex items-center justify-between">
+                        <h3 class="text-base font-medium">Do you offer customer support?</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 transition-transform duration-500 ease-in-out" data-chevron>
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </div>
+                    <p class="faq-answer text-sm text-slate-600 dark:text-slate-300 transition-all duration-500 ease-in-out max-w-xl opacity-0 max-h-0 overflow-hidden -translate-y-2">
+                        Yes, our support team is available 24/7 via live chat and email. We also have a help center with
+                        detailed documentation and tutorials.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="flex flex-col items-center text-center justify-center mt-20">
+            <h2 class="text-3xl font-semibold mt-16 mb-4">Ready to Get Started?</h2>
+            <p class="text-slate-600 dark:text-slate-200 max-w-xl mx-auto">
+                Join thousands of satisfied customers and transform your business today.
+            </p>
+            <div class="flex items-center gap-4 mt-8">
+                <button class="sfx-btn bg-purple-600 hover:bg-purple-700 transition text-white rounded-md px-6 h-11">
+                    Start free trial
+                </button>
+                <button class="sfx-btn border border-purple-900 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
+                    Contact sales
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer style="width: 100% !important" class="relative px-6 md:px-16 lg:px-24 xl:px-32 mt-40 w-full dark:text-slate-50">
+            <div class="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-200 dark:border-slate-700 pb-6">
+                <div class="md:max-w-114">
+                    <a href="#">
+                        <img id="logo-footer" class="h-9 md:h-9.5 w-auto shrink-0" src="./assets/imgs/logo-dark.svg" alt="Logo" width="140" height="40" priority fetchPriority="high" />
+                    </a>
+                    <p class="mt-6">
+                        Launch your SaaS product in record time with our all-in-one platform designed for speed,
+                        flexibility
+                        and growth. Whether you`&apos;re a solo founder or a fast-moving team, we provide everything you
+                        need.
+                    </p>
+                </div>
+                <div class="flex-1 flex items-start md:justify-end gap-20">
+                    <div>
+                        <h2 class="font-semibold mb-5">Company</h2>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#" class="nav-link hover:text-purple-600 transition">Home</a>
+                            </li>
+                            <li>
+                                <a href="#features" class="nav-link hover:text-purple-600 transition">Features</a>
+                            </li>
+                            <li>
+                                <a href="#testimonials" class="nav-link hover:text-purple-600 transition">Testimonials</a>
+                            </li>
+                            <li>
+                                <a href="#pricing" class="nav-link hover:text-purple-600 transition">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="#faqs" class="nav-link hover:text-purple-600 transition">FAQ's</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="font-semibold mb-5">Get in touch</h2>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#!" class="nav-link hover:text-purple-600 transition">+1-212-456-7890</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="nav-link hover:text-purple-600 transition">contact@example.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="pt-4 text-center pb-5">
+                Template originally created by <a href="https://prebuiltui.com?utm_source=landing" target="_blank">PrebuiltUI</a> (MIT License).
+            </p>
+        </footer>
+
+        <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/splitfx.min.js"></script>
+        <script src="./assets/js/apply-splitfx.js"></script>
+
+    </body>
+
+</html>
