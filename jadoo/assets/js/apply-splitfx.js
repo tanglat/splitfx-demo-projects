@@ -182,7 +182,7 @@ const serSFX = new SplitFX({
     }
 });
 serSFX.prepare(serH2);
-serSFX.animateOnScroll(serH2, true, {threshold: 1});
+serSFX.animateOnScroll(serH2, true, {threshold: .5});
 
 const destinationSec = document.getElementById("destination");
 const destH2 = destinationSec.querySelector("h2");
@@ -205,7 +205,7 @@ const destSFX = new SplitFX({
     }
 });
 destSFX.prepare(destH2);
-destSFX.animateOnScroll(destH2, true, {threshold: 1});
+destSFX.animateOnScroll(destH2, true, {threshold: .5});
 
 const bookingSec = document.getElementById("booking");
 const bookH2 = bookingSec.querySelector("h2");
@@ -228,7 +228,7 @@ const bookSFX = new SplitFX({
     }
 });
 bookSFX.prepare(bookH2);
-bookSFX.animateOnScroll(bookH2, true, {threshold: 1});
+bookSFX.animateOnScroll(bookH2, true, {threshold: .5});
 
 const testimonialSec = document.getElementById("testimonial");
 const testimonialH2 = testimonialSec.querySelector("h2");
@@ -251,7 +251,7 @@ const testimonialSFX = new SplitFX({
     }
 });
 testimonialSFX.prepare(testimonialH2);
-testimonialSFX.animateOnScroll(testimonialH2, true, {threshold: 1});
+testimonialSFX.animateOnScroll(testimonialH2, true, {threshold: .5});
 
 const footerSec = document.getElementById("footer");
 const footerH2Childs = footerSec.querySelectorAll("h2");
@@ -274,5 +274,5 @@ const footerSFX = new SplitFX({
     }
 });
 footerSFX.prepare(footerH2Childs);
-footerSFX.animateOnScroll(footerH2Childs, true, {threshold: 1});
+footerSFX.animateOnScroll(footerH2Childs, true, {threshold: .5});
 // Start - Animate on scroll
