@@ -4,8 +4,6 @@ SplitFX.animateSequence(h1, [
     {
         "content": "<span style='color: #F65C1B'>Build</span> &amp; <span style='color: #F65C1B'>Deploy</span> Smarter AI Agents in Minutes.",
         "allowHTML": true,
-
-        "tagName": "span",
         
         "in": {
             "mode": "chars",
@@ -29,11 +27,9 @@ SplitFX.animateSequence(h1, [
         "content": "Turn Simple Prompts into <span style='color: #F65C1B'>Powerful</span> Automation.",
         "allowHTML": true,
 
-        "mode": "chars",
-        "tagName": "span",
-        "includeSpaces": true,
-
         "in": {
+            "mode": "chars",
+            "includeSpaces": true,
             "animation": "fadeTop",
             "duration": 300,
             "easing": "linear",
@@ -53,11 +49,9 @@ SplitFX.animateSequence(h1, [
         "content": "<span style='color: #F65C1B'>Automate</span> Your Business. <span style='color: #F65C1B'>Scale</span> Without Limits.",
         "allowHTML": true,
 
-        "mode": "chars",
-        "tagName": "span",
-        "includeSpaces": true,
-
         "in": {
+            "mode": "chars",
+            "includeSpaces": true,
             "animation": "rotateRight",
             "duration": 500,
             "easing": "steps(2)",
@@ -136,22 +130,16 @@ pricingPlans.forEach(plan => {
 // // Start - Animate on scroll
 const secTitles = document.querySelectorAll("h2");
 const secTitlesSFX = new SplitFX({
-    "tagName": "span",
+    "_comment": "You can change the movement distance of the fadeRight animation using the --sfx-distance CSS variable, or by setting the vars.distance option when creating a new SplitFX instance.",
     "in": {
-        "mode": "chars",
-        "includeSpaces": false,
-        "animation": "rotateTopRight",
-        "duration": 500,
-        "easing": "linear",
-        "stagger": 50,
-        "staggerDir": "alternate",
-        "delay": 0
+        "animation": "fadeRight",
+        "duration": 1000,
+        "stagger": 40
     },
     "out": {
         "mode": "words",
         "duration": 0,
-        "stagger": 0,
-        "delay": 0
+        "stagger": 0
     }
 });
 secTitles.forEach(title => {
