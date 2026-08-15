@@ -6,14 +6,10 @@ SplitFX.animateSequence(h1, [
         "allowHTML": true,
         
         "in": {
-            "mode": "chars",
             "includeSpaces": false,
             "animation": "rotateTopRight",
-            "duration": 500,
             "easing": "linear",
-            "stagger": 50,
-            "staggerDir": "alternate",
-            "delay": 0
+            "staggerDir": "alternate"
         },
 
         "out": {
@@ -28,14 +24,12 @@ SplitFX.animateSequence(h1, [
         "allowHTML": true,
 
         "in": {
-            "mode": "chars",
-            "includeSpaces": true,
+            "includeSpaces": false,
             "animation": "fadeTop",
-            "duration": 300,
+            "duration": 400,
             "easing": "linear",
-            "stagger": 50,
-            "staggerDir": "random",
-            "delay": 0
+            "stagger": 40,
+            "staggerDir": "random"
         },
 
         "out": {
@@ -50,14 +44,8 @@ SplitFX.animateSequence(h1, [
         "allowHTML": true,
 
         "in": {
-            "mode": "chars",
-            "includeSpaces": true,
             "animation": "rotateRight",
-            "duration": 500,
-            "easing": "steps(2)",
-            "stagger": 50,
-            "staggerDir": "forward",
-            "delay": 0
+            "easing": "steps(2)"
         },
 
         "out": {
@@ -70,60 +58,52 @@ SplitFX.animateSequence(h1, [
 {repeat: "infinite"});
 
 // Start - Animate on hover
-const hoverOptions = {
+const hoverSFX = new SplitFX({
+    "_comment": "You can change the movement distance of the jump animation using the --sfx-distance CSS variable, or by setting the vars.distance option when creating a new SplitFX instance.",
     "in": {
-        "mode": "chars",
-        "includeSpaces": true,
         "animation": "jump",
         "duration": 400,
         "easing": "ease-out",
         "stagger": 40,
-        "staggerDir": "random",
-        "delay": 0
+        "staggerDir": "random"
     },
     "out": {
         "mode": "words",
         "duration": 0,
         "stagger": 0
     },
-    "tagName": "span",
     "vars": {
         "distance": "12px"
     }
-};
+});
 
 const navLinks = document.querySelectorAll(".nav-link");
-const navSFX = new SplitFX(hoverOptions);
 navLinks.forEach(link => {
-    navSFX.animateOnHover(link);
+    hoverSFX.animateOnHover(link);
 });
 
 const featureCards = document.querySelectorAll(".feature-card");
-const featureCardsSFX = new SplitFX(hoverOptions);
 featureCards.forEach(card => {
     const cardTitle = card.querySelector("h3");
-    featureCardsSFX.animateOnHover(cardTitle, {trigger: card});
+    hoverSFX.animateOnHover(cardTitle, {trigger: card});
 });
 
 const testimonialCards = document.querySelectorAll(".testimonial-card");
-const testimonialCardsSFX = new SplitFX(hoverOptions);
 testimonialCards.forEach(card => {
     const cardTitle = card.querySelector("h3");
-    testimonialCardsSFX.animateOnHover(cardTitle, {trigger: card});
+    hoverSFX.animateOnHover(cardTitle, {trigger: card});
 });
 
 const faqHeaders = document.querySelectorAll(".faq-header");
-const faqHeadersSFX = new SplitFX(hoverOptions);
 faqHeaders.forEach(header => {
     const headerText = header.querySelector("span");
-    faqHeadersSFX.animateOnHover(headerText, {trigger: header});
+    hoverSFX.animateOnHover(headerText, {trigger: header});
 });
 
 const pricingPlans = document.querySelectorAll(".pricing-plan");
-const pricingPlansSFX = new SplitFX(hoverOptions);
 pricingPlans.forEach(plan => {
     const cardTitle = plan.querySelector("h3");
-    pricingPlansSFX.animateOnHover(cardTitle, {trigger: plan});
+    hoverSFX.animateOnHover(cardTitle, {trigger: plan});
 });
 // // End - Animate on hover
 
@@ -149,22 +129,13 @@ secTitles.forEach(title => {
 const theProcessSec = document.getElementById("the-process");
 const theProcessSecNestedTitles = theProcessSec.querySelectorAll("h3");
 const theProcessSecNestedTitlesSFX = new SplitFX({
-    "tagName": "span",
     "in": {
-        "mode": "chars",
-        "includeSpaces": true,
-        "animation": "zoomOutLeft",
-        "duration": 500,
-        "easing": "ease",
-        "stagger": 50,
-        "staggerDir": "forward",
-        "delay": 0
+        "animation": "zoomOutLeft"
     },
     "out": {
         "mode": "words",
         "duration": 0,
-        "stagger": 0,
-        "delay": 0
+        "stagger": 0
     }
 });
 theProcessSecNestedTitles.forEach(title => {

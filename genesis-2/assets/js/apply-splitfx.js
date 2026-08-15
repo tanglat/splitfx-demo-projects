@@ -3,21 +3,16 @@ const nested = h1.querySelector(".nested");
 
 const textAnimator = new SplitFX({
     "in": {
-        "mode": "chars",
-        "includeSpaces": true,
         "animation": "typeWriter",
         "duration": 120,
         "easing": "linear",
-        "stagger": 120,
-        "staggerDir": "forward",
-        "delay": 0
+        "stagger": 120
     },
     "out": {
         "mode": "words",
         "duration": 0,
         "stagger": 0
     },
-    "tagName": "span",
     "vars": {
         "cursorColor": "white"
     }
@@ -31,7 +26,7 @@ textAnimator.animateIn(h1)
 .onfinish = () => {
     SplitFX.animateSequence(nested, [
         {
-            content: "Marketing",
+            "content": "Marketing",
 
             "in": {
                 "animation": "flash",
@@ -48,13 +43,13 @@ textAnimator.animateIn(h1)
             }
         },
         {
-            content: "Automation",
+            "content": "Automation",
 
             "in": {
                 "animation": "typeWriter",
-                "duration": 130,
+                "duration": 120,
                 "easing": "linear",
-                "stagger": 130
+                "stagger": 120
             },
             "out": {
                 "duration": 50,
@@ -64,13 +59,13 @@ textAnimator.animateIn(h1)
             }
         },
         {
-            content: "Customer Support",
+            "content": "Customer Support",
 
             "in": {
                 "animation": "typeWriter",
-                "duration": 130,
+                "duration": 120,
                 "easing": "linear",
-                "stagger": 130
+                "stagger": 120
             },
             "out": {
                 "duration": 50,
@@ -80,13 +75,13 @@ textAnimator.animateIn(h1)
             }
         },
         {
-            content: "Sales",
+            "content": "Sales",
 
             "in": {
                 "animation": "typeWriter",
-                "duration": 130,
+                "duration": 120,
                 "easing": "linear",
-                "stagger": 130
+                "stagger": 120
             },
             "out": {
                 "duration": 50,
@@ -96,13 +91,13 @@ textAnimator.animateIn(h1)
             }
         },
         {
-            content: "Automation",
+            "content": "Automation",
 
             "in": {
                 "animation": "typeWriter",
-                "duration": 130,
+                "duration": 120,
                 "easing": "linear",
-                "stagger": 130
+                "stagger": 120
             },
             "out": {
                 "duration": 50,
@@ -112,13 +107,13 @@ textAnimator.animateIn(h1)
             }
         },
         {
-            content: "Marketing",
+            "content": "Marketing",
 
             "in": {
                 "animation": "typeWriter",
-                "duration": 130,
+                "duration": 120,
                 "easing": "linear",
-                "stagger": 130
+                "stagger": 120
             },
             "out": {
                 "animation": "flash",
@@ -134,79 +129,70 @@ textAnimator.animateIn(h1)
 
 
 // Start - Animate on hover
-const hoverOptions = {
+const hoverSFX = new SplitFX({
     "in": {
-        "mode": "chars",
-        "includeSpaces": true,
+        "includeSpaces": false,
         "animation": "shakeX",
         "duration": 200,
         "easing": "linear",
         "stagger": 40,
-        "staggerDir": "centerOut",
-        "delay": 0
+        "staggerDir": "centerOut"
     },
     "out": {
         "mode": "words",
         "duration": 0,
         "stagger": 0
-    },
-    "tagName": "span"
-};
+    }
+});
 
 const navLinks = document.querySelectorAll(".nav-link");
-const navSFX = new SplitFX(hoverOptions);
 navLinks.forEach(link => {
-    navSFX.animateOnHover(link);
+    hoverSFX.animateOnHover(link);
 });
 
 const featureCards = document.querySelectorAll(".feature-card");
-const featureCardsSFX = new SplitFX(hoverOptions);
 featureCards.forEach(card => {
     const cardTitle = card.querySelector("h3");
-    featureCardsSFX.animateOnHover(cardTitle, {trigger: card});
+    hoverSFX.animateOnHover(cardTitle, {trigger: card});
 });
 
 const testimonialCards = document.querySelectorAll(".testimonial-card");
-const testimonialCardsSFX = new SplitFX(hoverOptions);
 testimonialCards.forEach(card => {
     const cardTitle = card.querySelector("h3");
-    testimonialCardsSFX.animateOnHover(cardTitle, {trigger: card});
+    hoverSFX.animateOnHover(cardTitle, {trigger: card});
 });
 
 const faqHeaders = document.querySelectorAll(".faq-header");
-const faqHeadersSFX = new SplitFX(hoverOptions);
 faqHeaders.forEach(header => {
     const headerText = header.querySelector("span");
-    faqHeadersSFX.animateOnHover(headerText, {trigger: header});
+    hoverSFX.animateOnHover(headerText, {trigger: header});
 });
 
 const pricingPlans = document.querySelectorAll(".pricing-plan");
-const pricingPlansSFX = new SplitFX(hoverOptions);
 pricingPlans.forEach(plan => {
     const cardTitle = plan.querySelector("h3");
-    pricingPlansSFX.animateOnHover(cardTitle, {trigger: plan});
+    hoverSFX.animateOnHover(cardTitle, {trigger: plan});
 });
 // // End - Animate on hover
 
 // // Start - Animate on scroll
 const secTitles = document.querySelectorAll("h2");
 const secTitlesSFX = new SplitFX({
+    "_comments": [
+        "Ensure stagger is >= duration to correctly simulate typing behavior",
+        "You can customize the typing cursor color and width for the typeWriter animation using the --sfx-cursor-color and --sfx-cursor-width CSS variables, or by setting the vars.cursorColor and vars.cursorWidth options when creating a new SplitFX instance."
+    ],
     "in": {
-        "mode": "chars",
-        "includeSpaces": true,
         "animation": "typeWriter",
-        "duration": 100,
+        "duration": 80,
         "easing": "linear",
-        "stagger": 100,
-        "staggerDir": "forward",
-        "delay": 0
+        "stagger": 80
     },
     "out": {
         "mode": "words",
         "duration": 0,
         "stagger": 0
     },
-    "tagName": "span",
     "vars": {
         "cursorColor": "white"
     }
@@ -218,22 +204,21 @@ secTitles.forEach(title => {
 const theProcessSec = document.getElementById("the-process");
 const theProcessSecNestedTitles = theProcessSec.querySelectorAll("h3");
 const theProcessSecNestedTitlesSFX = new SplitFX({
+    "_comments": [
+        "Ensure stagger is >= duration to correctly simulate typing behavior",
+        "You can customize the typing cursor color and width for the typeWriter animation using the --sfx-cursor-color and --sfx-cursor-width CSS variables, or by setting the vars.cursorColor and vars.cursorWidth options when creating a new SplitFX instance."
+    ],
     "in": {
-        "mode": "chars",
-        "includeSpaces": true,
         "animation": "typeWriter",
-        "duration": 100,
+        "duration": 80,
         "easing": "linear",
-        "stagger": 100,
-        "staggerDir": "forward",
-        "delay": 0
+        "stagger": 80
     },
     "out": {
         "mode": "words",
         "duration": 0,
         "stagger": 0
     },
-    "tagName": "span",
     "vars": {
         "cursorColor": "white"
     }

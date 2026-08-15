@@ -5,18 +5,12 @@ SplitFX.animateSequence(h1, [
         "content": `From idea to <span class="text-purple-600">live product</span> faster than ever`,
         "allowHTML": true,
 
-        "tagName": "span",
         "in": {
             "mode": "words",
-            "includeSpaces": true,
             "animation": "fadeRight",
-            "duration": 600,
-            "easing": "ease",
-            "stagger": 200,
-            "staggerDir": "forward",
-            "delay": 0
+            "duration": 800,
+            "stagger": 200
         },
-
         "out": {
             "staggerDir": "backward",
             "delay": 3000
@@ -31,19 +25,14 @@ SplitFX.animateSequence(h1, [
 
         "in": {
             "mode": "words",
-            "includeSpaces": true,
-            "animation": "fadeTop",
-            "duration": 600,
-            "easing": "linear",
-            "stagger": 300,
-            "staggerDir": "forward",
-            "delay": 0
+            "animation": "fadeRight",
+            "duration": 800,
+            "stagger": 200
         },
         "out": {
             "staggerDir": "backward",
             "delay": 3000
-        },
-        "tagName": "span"
+        }
     },
     // End - Step 2
 
@@ -52,18 +41,12 @@ SplitFX.animateSequence(h1, [
         "content": `The complete platform for <span class="text-purple-600">modern SaaS founders</span>`,
         "allowHTML": true,
 
-        "tagName": "span",
         "in": {
             "mode": "words",
-            "includeSpaces": true,
-            "animation": "flipY",
-            "duration": 600,
-            "easing": "ease",
-            "stagger": 200,
-            "staggerDir": "forward",
-            "delay": 0
+            "animation": "fadeRight",
+            "duration": 800,
+            "stagger": 200
         },
-
         "out": {
             "staggerDir": "backward",
             "delay": 3000
@@ -76,22 +59,15 @@ SplitFX.animateSequence(h1, [
 
 // Start - Animate on hover
 const hoverOptions = {
-    "tagName": "span",
     "in": {
         "mode": "words",
-        "includeSpaces": true,
         "animation": "wobble",
         "duration": 1000,
         "easing": "linear",
-        "stagger": 0,
-        "staggerDir": "forward",
-        "delay": 0
+        "stagger": 0
     },
     "out": {
-        "mode": "words",
-        "duration": 0,
-        "stagger": 0,
-        "delay": 0
+        "duration": 0
     }
 };
 
@@ -133,22 +109,16 @@ pricingPlans.forEach(plan => {
 // // Start - Animate on scroll
 const secTitles = document.querySelectorAll("h2");
 const secTitlesSFX = new SplitFX({
-    "tagName": "span",
+    "_comment": "You can change the movement distance of the fadeRight animation using the --sfx-distance CSS variable, or by setting the vars.distance option when creating a new SplitFX instance.",
     "in": {
         "mode": "words",
-        "includeSpaces": true,
-        "animation": "wobble",
-        "duration": 1200,
-        "easing": "linear",
-        "stagger": 0,
-        "staggerDir": "forward",
-        "delay": 0
+        "animation": "fadeRight",
+        "duration": 800,
+        "stagger": 200
     },
     "out": {
-        "mode": "words",
         "duration": 0,
-        "stagger": 0,
-        "delay": 0
+        "stagger": 0
     }
 });
 secTitles.forEach(title => {
